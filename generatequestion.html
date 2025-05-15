@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Questionator</title>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+      tinymce.init({forced_root_block : 'false',
+        selector: '#mytextarea',
+		width:600,
+		height:300
+      });
+</script>
+</head>
+
+<body>
+<fieldset>
+<legend>Generate Question</legend>
+<form name="generatequestion" method="POST" action="generatequestion.php">
+	<table cellpadding="2" cellspacing="5">
+	<tr>
+	<td>Year</td>
+	<td><select name="year"><option value="I PU">I PU</option><option value="II PU">II PU</option></td>
+	</tr>
+	<tr>
+	<td>Section A</td>
+	<td>Chapter</td>
+	<td><select name="chapterA"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></td>
+	<td><input type="submit" name="addA" id="Submit" value="Add"></td>
+	</tr>
+
+	<tr>
+	<td>Section B</td>
+	<td>Chapter</td>
+	<td><select name="chapterB"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></td>
+	<td><input type="submit" name="addB" id="Submit" value="Add"></td>
+	</tr>
+
+	<tr>
+	<td>Section C</td>
+	<td>Chapter</td>
+	<td><select name="chapterC"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></td>
+	<td><input type="submit" name="addC" id="Submit" value="Add"></td>
+	</tr>
+
+	<tr>
+	<td>Section D</td>
+	<td>Chapter</td>
+	<td><select name="chapterD"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></td>
+
+	<td><input type="submit" name="addD" id="Submit" value="Add"></td>
+	</tr>
+	</table>
+</form>
+<table cellpadding="2" cellspacing="5">
+	<td>
+	<a href="pdfgener.php" target="_blank">Click to View & Download</a></td>
+	<td><a href="edulogin.html" class="nav-item nav-link active">Home</a></td>
+	</tr>
+</table>
+
+</fieldset>
+</body>
+</html>
+

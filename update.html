@@ -1,0 +1,43 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Contact Form - PHP/MySQL Demo Code</title>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+      tinymce.init({forced_root_block : 'false',
+        selector: '#mytextarea'
+      });
+</script>
+</head>
+<body>
+<?php
+session_start();
+$id=$_GET['id'];
+$table=$_GET['table'];
+$question=$_GET['question'];
+$con = mysqli_connect('localhost', 'root', '','questionator');
+echo $question;
+?>
+<fieldset>
+<legend>Update Question</legend>
+<form name="updatequestion" method="post" action="update.php">
+<table cellpadding="5" cellspacing="5">
+<tr>
+
+<td>Selected Question</td>
+<td><textarea id="mytextarea" name="question">
+<?php echo $question;?>
+</textarea></td>
+<td>Marks</td>
+<td><select name="mark"><option>1</option><option>2</option><option>3</option><option>5</option></td>
+
+<td><input type="submit" name="Submit" id="Submit" value="Update"></td>
+<td><input type="reset" name="Reset" id="Reset" value="Reset"></td>
+<td><a href="viewquestion.html" class="nav-item nav-link active">Home</a></td>
+
+</tr>
+</form>
+</fieldset>
+</body>
+</html>

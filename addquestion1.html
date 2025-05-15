@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Questionator</title>
+<script src="https://cdn.tiny.cloud/1/5ryu4n0b7igvh14v072ot6eifkvdi1p0g1yin828q9m2y81a/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+      tinymce.init({forced_root_block : 'false',
+        selector: '#mytextarea'
+      });
+</script>
+
+
+</head>
+
+<body>
+
+<fieldset>
+
+<legend>Add Question</legend>
+<form name="addquestion" method="post" action="addquestion.php">
+<table cellpadding="5" cellspacing="5">
+
+<tr>
+<td>Year</td>
+<td><select name="year"><option value="I PU">I PU</option><option value="II PU">II PU</option></td>
+
+<td>Chapter</td>
+<td><select name="chapter"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></td>
+
+<td>Marks</td>
+<td><select name="mark"><option>1</option><option>2</option><option>3</option><option>5</option></td>
+
+<td>Question</td>
+<td><textarea id="mytextarea" name="question"></textarea></td>
+
+
+<td><input type="submit" name="Submit" id="Submit" value="Save"></td>
+<td><input type="reset" name="Reset" id="Reset" value="Reset"></td>
+<td><a href="edulogin.html" class="nav-item nav-link active">Home</a></td>
+</tr>
+</form>
+</fieldset>
+</body>
+</html>
+
